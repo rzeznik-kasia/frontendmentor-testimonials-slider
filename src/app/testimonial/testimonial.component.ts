@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Testimonial } from './testimonial.model';
 
 @Component({
   selector: 'fm-testimonial',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimonial.component.less']
 })
 export class TestimonialComponent implements OnInit {
-
+  @Input() testimonial: Testimonial;
   constructor() { }
 
   ngOnInit() {
