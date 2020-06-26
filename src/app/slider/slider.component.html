@@ -1,17 +1,7 @@
-
-<ngb-carousel [showNavigationIndicators]="false" [interval]="0" [showNavigationArrows]="false" #imgCarousel>
-  <ng-template ngbSlide *ngFor="let slide of slides ">
-    <p>{{slide.description}}</p>
-    <p>{{slide.name}}</p>
-    <p>{{slide.jobName}}</p>
-    <p>
-      <img [src]="slide.imageUrl">
-    </p>
-    <button (click)="prev()">
-      <img src="../../assets/images/icon-prev.svg" role='image'>
-    </button>
-    <button (click)="next()">
-      <img src="../../assets/images/icon-next.svg" role='image'>
-    </button>
-  </ng-template>
-</ngb-carousel>
+<ng-template slide-host></ng-template>
+<button (click)="prev()">
+  <img src="../../assets/images/icon-prev.svg" role='image'>
+</button>
+<button (click)="next()">
+  <img src="../../assets/images/icon-next.svg" role='image'>
+</button>
