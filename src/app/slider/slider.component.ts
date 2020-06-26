@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { TestimonialService } from '../services/testimonial.service';
+import { Component, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: 'fm-slider',
@@ -7,10 +6,10 @@ import { TestimonialService } from '../services/testimonial.service';
   styleUrls: ['./slider.component.less']
 })
 export class SliderComponent {
-  testimonials$ = this.testimonialService.testimonials$;
+  @Input() slides;
   @ViewChild('imgCarousel') imgCarousel: any;
 
-  constructor(private testimonialService: TestimonialService) { }
+  constructor() { }
 
   prev() {
     this.imgCarousel.prev();

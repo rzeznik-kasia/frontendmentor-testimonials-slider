@@ -1,11 +1,11 @@
 
 <ngb-carousel [showNavigationIndicators]="false" [interval]="0" [showNavigationArrows]="false" #imgCarousel>
-  <ng-template ngbSlide *ngFor="let testimonial of testimonials$ | async ">
-    <p>{{testimonial.description}}</p>
-    <p>{{testimonial.name}}</p>
-    <p>{{testimonial.jobName}}</p>
+  <ng-template ngbSlide *ngFor="let slide of slides ">
+    <p>{{slide.description}}</p>
+    <p>{{slide.name}}</p>
+    <p>{{slide.jobName}}</p>
     <p>
-      <img [src]="testimonial.imageUrl">
+      <img [src]="slide.imageUrl">
     </p>
     <button (click)="prev()">
       <img src="../../assets/images/icon-prev.svg" role='image'>
