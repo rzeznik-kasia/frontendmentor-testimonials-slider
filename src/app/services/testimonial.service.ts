@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Testimonial } from '../testimonial/testimonial.model';
-import { Observable, from, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
+
+import { Testimonial } from '../testimonials/testimonial.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TestimonialService {
   testimonials$: Observable<Testimonial[]> = of(Testimonials);
-  
-  constructor() { }
 }
 
 const Testimonials = [

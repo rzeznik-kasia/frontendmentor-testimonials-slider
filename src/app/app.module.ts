@@ -1,14 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { SliderComponent } from './slider/slider.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { TestimonialService } from './services/testimonial.service';
+import { SlideDirective } from './slider/slide.directive';
 
 @NgModule({
   declarations: [
@@ -16,13 +15,14 @@ import { TestimonialService } from './services/testimonial.service';
     FooterComponent,
     TestimonialComponent,
     SliderComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    SlideDirective
   ],
   imports: [
-    BrowserModule,
-    NgbModule
+    BrowserModule
   ],
   providers: [TestimonialService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [TestimonialComponent]
 })
 export class AppModule { }
