@@ -31,9 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less",
-              "src/css/bootstrap.min.css"
-            ],
+              "src/styles.less"            ],
             "scripts": []
           },
           "configurations": {
