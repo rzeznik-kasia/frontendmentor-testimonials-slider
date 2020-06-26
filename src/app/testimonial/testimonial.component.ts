@@ -1,15 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Testimonial } from './testimonial.model';
+import { Component, Input } from '@angular/core';
+
+import { SlideComponent } from './slide.component';
 
 @Component({
-  selector: 'fm-testimonial',
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.less']
 })
-export class TestimonialComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class TestimonialComponent implements SlideComponent {
+  @Input() data: any;
 }
