@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TestimonialService } from '../services/testimonial.service';
 
 @Component({
   selector: 'fm-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.less']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent {
+  testimonials$ = this.testimonialService.testimonials$;
+  @ViewChild('imgCarousel') imgCarousel: any;
 
-  constructor() { }
+  constructor(private testimonialService: TestimonialService) { }
 
-  ngOnInit() {
+  prev() {
+    this.imgCarousel.prev();
+  }
+
+  next() {
+    this.imgCarousel.next();
   }
 
 }

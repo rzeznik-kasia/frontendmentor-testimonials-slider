@@ -7,7 +7,6 @@ import { Testimonial } from './testimonial.model';
   styleUrls: ['./testimonial.component.less']
 })
 export class TestimonialComponent implements OnInit {
-  @Input() testimonial: Testimonial;
   constructor() { }
 
   ngOnInit() {

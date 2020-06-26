@@ -1,3 +1,20 @@
-<p>
-  slider works!
-</p>
+<div class="row">
+  <div class="mainImageContainer">
+      <ngb-carousel [showNavigationIndicators]="false" [interval]="0" [showNavigationArrows]="false" #imgCarousel>
+          <ng-template ngbSlide *ngFor="let testimonial of testimonials$ | async ">
+              <p>{{testimonial.description}}</p>
+              <p>{{testimonial.name}}</p>
+              <p>{{testimonial.jobName}}</p>
+              <p>
+                  <img [src]="testimonial.imageUrl">
+              </p>
+              <button (click)="prev()">
+                  <img src="../../assets/images/icon-prev.svg" role='image'>
+              </button>
+              <button (click)="next()">
+                  <img src="../../assets/images/icon-next.svg" role='image'>
+              </button>
+          </ng-template>
+      </ngb-carousel>
+  </div>
+</div>
